@@ -11,6 +11,7 @@ Languages
 ├── Python          — primary research and AI engineering language
 ├── C++             — ROS2, HPC, embedded, performance-critical systems
 ├── CUDA C++        — GPU programming, kernel writing
+├── Backend Engineering + System Design Fundmentals
 └── Bash / Shell    — Linux internals, automation, deployment scripting
 ```
 
