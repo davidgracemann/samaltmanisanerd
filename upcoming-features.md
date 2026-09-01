@@ -1,31 +1,30 @@
-# [ Upcoming Roadmap ] // Technical Expansion
+# AI Development Stack
 
-### 01. Agentic Mesh v2: Peer-to-Peer Orchestration
-Transitioning from linear agent loops to a decentralized, state-synchronized network. 
-* **Core Logic:** Implementation of supervisor-worker topologies where each node maintains local state but shares a global objective through a unified messaging bus.
-* **Failure Handling:** Engineering "mathematically expensive" failure bounds—implementing circuit breakers and validation gates at each agent hop to prevent recursive hallucination loops.
-* **Architecture:** Moving toward a graph-based execution model where agent dependencies are resolved dynamically based on tool-API matrix availability.
+## Subscriptions and API Infrastructure
 
----
+| Provider | Access Method | Budget Layer | Target Workloads |
+| :--- | :--- | :--- | :--- |
+| Anthropic Claude Pro | Web UI / ClaudeCode CLI | 20 EUR / Mo Fixed | Complex system architecture, high-level prose, multi-file refactoring workflows |
+| OpenRouter | API Endpoint | 50 EUR / Mo Metered | Inline text completions, uncensored generation, heavy programming loops |
+| Ollama | Local Localhost | 0 EUR (Free) | Boilerplate generation, syntax checking, low-latency offline executions |
 
-### 02. Local-Ollama: Blackwell-Optimized Inference
-Migrating all primary inference tasks to the on-device RTX 5070 to ensure data sovereignty and zero-latency internal routing.
-* **Precision Tuning:** Optimization of GGUF quantization levels (K-Quants) to maximize the 8GB/12GB VRAM throughput of the Blackwell architecture.
-* **Internal Routing:** Establishing a local REST API endpoint (Ollama-as-a-service) to serve as the backbone for the Agentic Mesh v2.
-* **Performance Targets:** Maintaining 50+ tokens/sec on 8B models (Llama 3 / Phi-4) while preserving system resources for background systems research.
+## Model Routing Matrix
 
----
+| Model Identifier | Host Provider | Guardrail Status | Primary Engineering Use Case |
+| :--- | :--- | :--- | :--- |
+| anthropic/claude-3.5-sonnet | Claude Pro / OpenRouter | High Restriction | Complex logic, code generation, detailed technical writing |
+| deepseek/deepseek-r1 | OpenRouter | Objective | Complex reasoning, mathematical validation, logic-heavy programming |
+| nousresearch/hermes-3-llama-3.1-405b | OpenRouter | Uncensored | Raw generation, deep vulnerability testing, zero-refusal scenarios |
+| qwen2.5-coder:7b-instruct-q8_0 | Local (Ollama) | Minimal | High-speed local code completion, background syntax checks |
+| hermes3:8b | Local (Ollama) | Uncensored | Offline prototyping, localized script generation, raw text generation |
 
-### 03. Memory Engineering: Recursive XML Framework
-A structured approach to long-term memory and context injection using hierarchical tagging.
-* **The Schema:** Utilizing recursive XML structures to nest context—allowing the agent to "unfold" specific memory nodes only when triggered by relevant query vectors.
-* **Token Efficiency:** Reducing prompt noise by replacing natural language instructions with high-density, schema-validated XML blocks.
-* **State Retrieval:** Building a hierarchical retrieval system where agents can crawl recursive memory trees to find historical context without flooding the context window.
+## Core Tooling and Runtime Layer
 
----
-
-### 04. Dev-Tools_Set-B: Observability & Persistence
-Secondary toolset for monitoring the alphaNode’s telemetry and managing research data.
-* **Vector Persistence:** Deployment of local vector databases (ChromaDB or Qdrant) via Docker to handle high-dimensional embeddings for FAiR projects.
-* **Observability:** Integrating Prometheus/Grafana (or specialized CLI exporters) to monitor i9-14900HX thermal throttling and GPU VRAM pressure during heavy agentic loads.
-* **API Gateway:** Setting up a unified gateway (like Kong or a custom Python-based proxy) to manage and rate-limit the tool-API matrix interactions.
+| Tool Name | Interface Type | Integration Hook | Functionality |
+| :--- | :--- | :--- | :--- |
+| Zed Editor | Desktop UI | OpenRouter API / Ollama | Rust-based GPU-accelerated editor for inline completions |
+| Aider | Command Line | OpenRouter API | Terminal-first pair programmer with automated Git commit loops |
+| ClaudeCode | Command Line | Anthropic Token / OpenRouter | Native Anthropic CLI agent for autonomous workspace debugging |
+| OpenCode | Command Line | OpenRouter API | Model-agnostic terminal agent for custom workflow execution |
+| Arize Phoenix | Web UI / Docker | Local Container Execution | Local-first trace visualization for LangGraph pipelines |
+| Promptfoo | Command Line | Local Test Engine | Test-driven configuration verification for prompt payloads |
